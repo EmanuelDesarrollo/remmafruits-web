@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general para todo el documento */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo del header */
+header {
+    background-color: #fff;
+    /* box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1); */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 3rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo de los elementos del menú */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+}
+
+nav li {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+    border: 1px solid transparent;
+    padding: 0 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+nav li:hover > a {
+    /* background-color: #ffe7c6;
+    color: #898989;
+    border-color: #ffe7c6; */
+    font-weight: bold;
+    border-bottom: 2px solid #ffe7c6;
+}
+
+.section-intro {
+    width: 100%;
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/banner_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.vaso-frappe {
+    position: absolute;
+    width: 40%;
+    bottom: -50px;
+    left: 28%;
+    z-index: -1000;
+    transform: rotate(20deg);
+    animation: fadeInBannerGlass 1s ease-in-out;
+}
+
+
+/* Seccion de productos */
+.section-products{
+    padding: 1rem 2rem;
+}
+
+h1.title-section{
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.list-product{
+    display: flex;
+    gap: 2rem;
+}
+
+.card-product{
+    /* width: 23%; */
+    min-height: 130px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.card-product img{
+    width: 100%;
+}
+
+.card-product p{
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.button-add-product{
+    width: 100%;
+    cursor: pointer;
+    padding: .5rem 2rem;
+    border-radius: 8px;
+    border: 1px solid #6a963b;
+    color: #fff;
+    background-color: #6a963b;
+    transition: background-color 0.3s ease;
+}
+
+.button-add-product:hover{
+    background-color: #6a963bba;
+}
+
+
+/* Separador */
+.separator{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.separator::before{
+    content: '';
+    border-bottom: 1px solid #aea7a7;
+    width: 25%;
+    margin-bottom: .5rem;
+}
+
+.separator::after{
+    content: '';
+    border-bottom: 1px solid #aea7a7;
+    width: 25%;
+    margin-bottom: .5rem;
+}
+
+.separator img{
+    width: 1rem;
+    opacity: .7;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* Seccion porque nostros */
+.section-why-us{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-why-us p{
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 60%;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #f8edff;
+    text-align: center;
+    padding: 10px 0;
+    /* box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Animaciones */
+@keyframes fadeInBannerGlass {
+    0% {
+        opacity: 0;
+        bottom: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: -50px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
