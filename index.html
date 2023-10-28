@@ -2,22 +2,33 @@
 <html>
 
 <head>
-    <title>Tu Sitio Web</title>
+    <title>RemmaFruits</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
-<body>
+<body id="body">
     <!-- Sección 1: Header Superior -->
     <header>
-        <p>LOGO</p>
+        <figure class="logo">
+            <a href="/index.html">
+                <img src="/assets/logo_remmafruits_transparente.png" alt="logo remma fruits">
+            </a>
+        </figure>
         <nav>
             <ul>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contáctanos</a></li>
+                <li><a href="/pages/nosotros.html">Nosotros</a></li>
+                <li><a href="/pages/productos.html">Productos</a></li>
                 <li><a href="#">Promociones</a></li>
-                <li><a href="#">Carrito de Compras</a></li>
+                <li class="car">
+                    <a href="#" onclick="showAside()">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge-car hide" id="badge-card-products">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -36,22 +47,42 @@
             <div class="card-product">
                 <img src="/assets/products/producto.jpeg" alt="producto ejemplo">
                 <p>Texto descriptivo del producto del producto, componentes etc.</p>
-                <button class="button-add-product">Agregar</button>
+                <button class="button-add-product" onclick="agregarProducto('producto_1', event)">
+                    Agregar
+                    <span class="check hide">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </button>
             </div>
             <div class="card-product">
                 <img src="/assets/products/producto.jpeg" alt="producto ejemplo">
                 <p>Texto descriptivo del producto del producto, componentes etc.</p>
-                <button class="button-add-product">Agregar</button>
+                <button class="button-add-product" onclick="agregarProducto('producto_2', event)">
+                    Agregar
+                    <span class="check hide">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </button>
             </div>
             <div class="card-product">
                 <img src="/assets/products/producto.jpeg" alt="producto ejemplo">
                 <p>Texto descriptivo del producto del producto, componentes etc.</p>
-                <button class="button-add-product">Agregar</button>
+                <button class="button-add-product" onclick="agregarProducto('producto_3', event)">
+                    Agregar
+                    <span class="check hide">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </button>
             </div>
             <div class="card-product">
                 <img src="/assets/products/producto.jpeg" alt="producto ejemplo">
                 <p>Texto descriptivo del producto del producto, componentes etc.</p>
-                <button class="button-add-product">Agregar</button>
+                <button class="button-add-product" onclick="agregarProducto('producto_4', event)">
+                    Agregar
+                    <span class="check hide">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </button>
             </div>
         </div>
     </section>
@@ -66,10 +97,63 @@
         <p>Texto breve y persuasivo sobre por qué los visitantes deberían elegir tus productos o servicios.</p>
     </section>
 
+    <!-- Sección 5: Ubicacion -->
+    <section class="section-location">
+        <h1 class="title-section">Ubicación</h1>
+        <p>Asi podras llegar a nosotros.</p>
+
+        <figure class="maps">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.66131753929!2d-76.54578520000003!3d3.4361973000000092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a683021c3061%3A0xdba200d3b2aacec8!2sCl.%203%20Oe.%20%2334-99%20a%2034-1%2C%20El%20Sindicato%2C%20Cali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1697943731280!5m2!1ses!2sco"
+                width="60%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </figure>
+    </section>
     <!-- Sección 6: Footer -->
     <footer>
         <p>© 2023 Remmafruits</p>
     </footer>
+
+    <section class="backdrop-aside hide" id="aside">
+        <aside class="container-products-buy">
+            <div>
+                <h1 class="order-title">
+                    Mi pedido
+                    <span>
+                        <a href="#" onclick="hideAside()">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </a>
+                    </span>
+                </h1>
+
+                <div class="order-list" id="order-list">
+                </div>
+
+                <div class="order-success hide" id="order-success">
+                    <p>¡Gracias por tu compra!</p>
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+            </div>
+
+            <div class="container-button-order">
+                <button class="button-add-product" id="order-action" onclick="buyOrder()">Comprar</button>
+                <button class="button-close hide" id="order-cancel" onclick="hideAside()">Cerrar</button>
+            </div>
+        </aside>
+    </section>
+
+
+    <!-- Facebook icon. -->
+    <a href="https://facebook.com/" target="_blank" class="facebook-fab">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <!-- Whatsapp icon. -->
+    <a href="https://wa.me/+573155717360/?text=Hola,%20me%20gustaría%20comprar:%20" target="_blank"
+        class="whatsapp-fab">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="scripts/global-scripts.js"></script>
 </body>
 
 </html>

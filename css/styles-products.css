@@ -1,0 +1,22 @@
+header {
+  animation: none;
+}
+
+.section-products-banner {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.section-products-banner figure {
+  width: 50%;
+}
+
+.section-products-banner figure img {
+  width: 100%;
+}
+
+.section-product-list {
+  padding: 1rem 2rem;
+}

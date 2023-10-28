@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RemmaFruits</title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/styles-us.css">
+</head>
+
+<body id="body">
+  <!-- Sección 1: Header Superior -->
+  <header>
+    <figure class="logo">
+      <a href="/index.html">
+        <img src="/assets/logo_remmafruits_transparente.png" alt="logo remma fruits">
+      </a>
+    </figure>
+    <nav>
+      <ul>
+        <li class="active"><a href="/pages/nosotros.html">Nosotros</a></li>
+        <li><a href="/pages/productos.html">Productos</a></li>
+        <li><a href="#">Promociones</a></li>
+        <li class="car">
+          <a href="#" onclick="showAside()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge-car hide" id="badge-card-products">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección: Imagen Banner -->
+  <section class="section-us-banner">
+    <figure>
+      <img src="../assets/banner_nosotros.jpg" alt="Banner">
+    </figure>
+  </section>
+
+  <!-- Sección: Por qué Elegirnos -->
+  <section class="section-us-text">
+    <h1 class="title-section">¿Porque nosotros?</h1>
+    <p>En Remmafruits, nos enorgullece presentarte una exquisita variedad de bebidas refrescantes frutales y una amplia
+      selección de cafés de alta calidad. Somos una empresa dedicada a brindar experiencias culinarias únicas y
+      satisfacer tus sentidos a través de una gama de productos frescos y deliciosos.</p>
+    <p>Remmafruits es una empresa apasionada por la calidad y la innovación en el mundo de las bebidas. Fundada por
+      amantes de la fruta y el café, nuestra misión es llevar lo mejor de la naturaleza y la cultura del café
+      directamente a tu taza. Desde nuestros inicios, nos hemos esforzado por crear bebidas que no solo refresquen, sino
+      que también deleiten tus papilas gustativas.</p>
+
+    <p>Nuestro compromiso con la excelencia se refleja en cada sorbo que ofertamos. Cada bebida que servimos es
+      elaborada con ingredientes frescos y seleccionados con cuidado. Desde jugos de frutas naturales hasta lujosos
+      cafés especiales, nuestras creaciones son el resultado de la pasión y la maestría que ponemos en cada etapa del
+      proceso.</p>
+
+    <h2 class="subtitle-section">Lo Que Vendemos: Delicias en Cada Taza</h2>
+    <p><span>Bebidas Frutales Refrescantes: </span>Explora nuestra selección de jugos y bebidas frutales hechos con
+      frutas frescas y sabores naturales. Desde
+      clásicos cítricos hasta mezclas exóticas, te ofrecemos una amplia variedad de opciones para satisfacer tu sed y tu
+      paladar.</p>
+
+    <p><span>Café de Primera Calidad: </span>Sumérgete en el mundo del café con nuestros granos de alta calidad. Desde
+      espresso hasta café filtrado, te
+      invitamos a descubrir aromas y sabores que te transportarán a diferentes rincones del mundo.</p>
+
+    <h2 class="subtitle-section">Nuestra Promesa</h2>
+    <p>En Remmafruits, no solo creamos bebidas, sino experiencias que te transportarán a lugares de sabor y frescura.
+      Nuestra pasión por la calidad, el sabor y la satisfacción del cliente impulsa cada aspecto de nuestro negocio.</p>
+    <p>¿Estás listo para disfrutar de una nueva dimensión de sabor? Únete a nosotros en el viaje de Remmafruits y
+      descubre un mundo de delicias en cada taza. ¡Esperamos servirte pronto!</p>
+  </section>
+  <!-- Sección Footer -->
+  <footer>
+    <p>© 2023 Remmafruits</p>
+  </footer>
+
+  <section class="backdrop-aside hide" id="aside">
+    <aside class="container-products-buy">
+      <div>
+        <h1 class="order-title">
+          Mi pedido
+          <span>
+            <a href="#" onclick="hideAside()">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </a>
+          </span>
+        </h1>
+
+        <div class="order-list" id="order-list">
+        </div>
+
+        <div class="order-success hide" id="order-success">
+          <p>¡Gracias por tu compra!</p>
+          <i class="fa-regular fa-circle-check"></i>
+        </div>
+      </div>
+
+      <div class="container-button-order">
+        <button class="button-add-product" id="order-action" onclick="buyOrder()">Comprar</button>
+        <button class="button-close hide" id="order-cancel" onclick="hideAside()">Cerrar</button>
+      </div>
+    </aside>
+  </section>
+
+  <!-- Whatsapp icon. -->
+  <a href="https://wa.me/+573155717360/?text=Hola,%20me%20gustaría%20comprar:%20" target="_blank" class="whatsapp-fab">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="../scripts/global-scripts.js"></script>
+</body>
+
+</html>
