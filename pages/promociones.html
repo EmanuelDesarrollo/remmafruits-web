@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RemmaFruits</title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/styles-products.css">
+</head>
+
+<body id="body">
+  <!-- Sección 1: Header Superior -->
+  <header>
+    <figure class="logo">
+      <a href="../index.html">
+        <img src="../assets/logo_remmafruits_transparente.png" alt="logo remma fruits">
+      </a>
+    </figure>
+    <nav>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li class="active"><a href="pages/promociones.html">Promociones</a></li>
+        <li class="car">
+          <a href="#" onclick="showAside()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge-car hide" id="badge-card-products">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección: Imagen Banner -->
+  <section class="section-products-banner">
+    <figure>
+      <img src="../assets/banner_productos.jpg" alt="Banner">
+    </figure>
+  </section>
+
+  <!-- Sección: Por qué Elegirnos -->
+  <section class="section-product-list">
+    <h1 class="title-section">Promociones</h1>
+    <p class="promo-text">Por la compra de 2 Frappe grandes lleva un ChocoBrowni gratis</p>
+    <div class="list-product">
+      <div class="card-product">
+        <img src="../assets/products/Brownie.jpg" alt="producto ejemplo">
+        <h2 class="name-product">Frappé ChocoBrowni</h2>
+        <p>Frappé de Chocolate, jarabe de chocolate, chantilly con trocitos de Brownie.</p>
+        <p class="precio">$16,500</p>
+        <button class="button-add-product" onclick="agregarProducto('producto_1', event)">
+          Agregar
+          <span class="check hide">
+            <i class="fa-solid fa-check"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Sección Footer -->
+  <footer>
+    <p>© 2023 Remmafruits</p>
+  </footer>
+
+  <section class="backdrop-aside hide" id="aside">
+    <aside class="container-products-buy">
+      <div>
+        <h1 class="order-title">
+          Mi pedido
+          <span>
+            <a href="#" onclick="hideAside()">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </a>
+          </span>
+        </h1>
+
+        <div class="order-list" id="order-list">
+        </div>
+
+        <div class="order-success hide" id="order-success">
+          <p>¡Gracias por tu compra!</p>
+          <i class="fa-regular fa-circle-check"></i>
+        </div>
+      </div>
+
+      <div class="container-button-order">
+        <button class="button-add-product" id="order-action" onclick="buyOrder()">Comprar</button>
+        <button class="button-close hide" id="order-cancel" onclick="hideAside()">Cerrar</button>
+      </div>
+    </aside>
+  </section>
+
+  <!-- Facebook icon. -->
+  <a href="https://www.facebook.com/REMMAFRUITS/" target="_blank" class="facebook-fab">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <!-- Whatsapp icon. -->
+  <a href="https://wa.me/+573155717360/?text=Hola,%20me%20gustaría%20comprar:%20" target="_blank" class="whatsapp-fab">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="../scripts/global-scripts.js"></script>
+</body>
+
+</html>

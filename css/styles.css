@@ -466,6 +466,20 @@ button:disabled {
     transform: scale(1.1);
 }
 
+.name-product {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.promo-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
 /* Animaciones */
 @keyframes fadeInBannerGlass {
     0% {

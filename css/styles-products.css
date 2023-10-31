@@ -20,3 +20,11 @@ header {
 .section-product-list {
   padding: 1rem 2rem;
 }
+
+.name-product {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
